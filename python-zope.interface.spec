@@ -8,12 +8,12 @@
 Summary:	Python 'interface' concept implementation
 Summary(pl.UTF-8):	Implementacja interfejsów dla języka Python
 Name:		python-%{module}
-Version:	4.0.3
-Release:	2
+Version:	4.5.0
+Release:	1
 License:	ZPL 2.1
 Group:		Libraries/Python
-Source0:	http://pypi.python.org/packages/source/z/zope.interface/zope.interface-%{version}.tar.gz
-# Source0-md5:	1ddd308f2c83703accd1696158c300eb
+Source0:	https://files.pythonhosted.org/packages/source/z/zope.interface/zope.interface-%{version}.tar.gz
+# Source0-md5:	7b669cd692d817772c61d2e3ad0f1e71
 URL:		http://docs.zope.org/zope.interface/
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.710
@@ -90,7 +90,7 @@ rm -rf $RPM_BUILD_ROOT
 %if %{with python2}
 %files
 %defattr(644,root,root,755)
-%doc CHANGES.txt
+%doc CHANGES.rst
 %dir %{py_sitedir}/zope/interface
 %{py_sitedir}/zope/interface/*.py[co]
 %attr(755,root,root) %{py_sitedir}/zope/interface/_zope_interface_coptimizations.so
@@ -103,7 +103,7 @@ rm -rf $RPM_BUILD_ROOT
 %if %{with python3}
 %files -n python3-%{module}
 %defattr(644,root,root,755)
-%doc CHANGES.txt
+%doc CHANGES.rst
 %dir %{py3_sitedir}/zope/interface
 %{py3_sitedir}/zope/interface/*.py
 %{py3_sitedir}/zope/interface/__pycache__
