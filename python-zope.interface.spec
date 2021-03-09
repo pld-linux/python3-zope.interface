@@ -5,12 +5,12 @@
 %bcond_without	python3 # CPython 3.x module
 %bcond_without	tests	# unit tests
 
-%define 	module	zope.interface
+%define		module	zope.interface
 Summary:	Python 'interface' concept implementation
 Summary(pl.UTF-8):	Implementacja interfejsów dla języka Python
 Name:		python-%{module}
 Version:	4.7.1
-Release:	4
+Release:	5
 License:	ZPL v2.1
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/zope.interface/
@@ -68,6 +68,7 @@ języka Python.
 Summary:	API documentation for Python zope.interface module
 Summary(pl.UTF-8):	Dokumentacja API modułu Pythona zope.interface
 Group:		Documentation
+BuildArch:	noarch
 
 %description apidocs
 API documentation for Python zope.interface module.
