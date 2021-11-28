@@ -9,13 +9,13 @@
 Summary:	Python 'interface' concept implementation
 Summary(pl.UTF-8):	Implementacja interfejsów dla języka Python
 Name:		python-%{module}
-Version:	4.7.1
-Release:	6
+Version:	4.7.2
+Release:	1
 License:	ZPL v2.1
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/zope.interface/
 Source0:	https://files.pythonhosted.org/packages/source/z/zope.interface/zope.interface-%{version}.tar.gz
-# Source0-md5:	1bc66758275c5eb66d169acba3c8e50e
+# Source0-md5:	ea062be6c8908896ed28a1568802ba1a
 URL:		https://zopeinterface.readthedocs.io/
 %if %{with python2}
 BuildRequires:	python >= 1:2.7
