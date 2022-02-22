@@ -39,8 +39,8 @@ Requires:	python-modules >= 1:2.7
 Requires:	python-zope-base
 Provides:	ZopeInterface
 Provides:	Zope-Interface
-Obsoletes:	ZopeInterface
-Obsoletes:	Zope-Interface
+Obsoletes:	ZopeInterface < 3.4.0
+Obsoletes:	Zope-Interface < 3.5.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
