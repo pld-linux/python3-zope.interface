@@ -9,25 +9,34 @@
 Summary:	Python 'interface' concept implementation
 Summary(pl.UTF-8):	Implementacja interfejsów dla języka Python
 Name:		python-%{module}
-Version:	4.7.2
-Release:	3
+# keep 5.x here for python2 support
+Version:	5.5.2
+Release:	1
 License:	ZPL v2.1
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/zope.interface/
 Source0:	https://files.pythonhosted.org/packages/source/z/zope.interface/zope.interface-%{version}.tar.gz
-# Source0-md5:	ea062be6c8908896ed28a1568802ba1a
+# Source0-md5:	5a383d71156ce6f89f59a86d957a8d65
 URL:		https://zopeinterface.readthedocs.io/
 %if %{with python2}
 BuildRequires:	python >= 1:2.7
 BuildRequires:	python-devel >= 1:2.7
 BuildRequires:	python-setuptools
-%{?with_tests:BuildRequires:	python-zope.event}
+%if %{with tests}
+BuildRequires:	python-coverage >= 5.0.3
+BuildRequires:	python-zope.event
+BuildRequires:	python-zope.testing
+%endif
 %endif
 %if %{with python3}
 BuildRequires:	python3 >= 1:3.5
 BuildRequires:	python3-devel >= 1:3.5
 BuildRequires:	python3-setuptools
-%{?with_tests:BuildRequires:	python3-zope.event}
+%if %{with tests}
+BuildRequires:	python3-coverage >= 5.0.3
+BuildRequires:	python3-zope.event
+BuildRequires:	python3-zope.testing
+%endif
 %endif
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
