@@ -8,7 +8,7 @@ Summary:	Python 'interface' concept implementation
 Summary(pl.UTF-8):	Implementacja interfejsów dla języka Python
 Name:		python3-%{module}
 Version:	7.2
-Release:	1
+Release:	2
 License:	ZPL v2.1
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/zope.interface/
@@ -33,10 +33,6 @@ BuildRequires:	sphinx-pdg-3
 %endif
 Requires:	python3-modules >= 1:3.8
 Requires:	python3-zope-base
-Provides:	ZopeInterface
-Provides:	Zope-Interface
-Obsoletes:	ZopeInterface < 3.4.0
-Obsoletes:	Zope-Interface < 4.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
